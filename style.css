@@ -65,3 +65,18 @@ h1 { color: #333; margin-bottom: 5px; }
 .github { background: #333; }
 
 .btn:hover { opacity: 0.8; }
+/* Instagram uchun gradient rang */
+.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Ikonka va matn orasida bo'sh joy */
+.btn i {
+    margin-right: 8px;
+}
+
+/* Tugmalar ustiga sichqoncha kelganda */
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05); /* Bir oz kattalashadi */
+}
