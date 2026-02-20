@@ -1,3 +1,4 @@
+/* 1. Umumiy sozlamalar */
 * {
     margin: 0;
     padding: 0;
@@ -5,78 +6,98 @@
 }
 
 body {
+    /* Orqa fon uchun chiroyli gradient */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* 2. Kartochka dizayni */
 .card {
     background: white;
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
     text-align: center;
-    max-width: 350px;
+    max-width: 380px;
+    width: 90%; /* Mobil qurilmalar uchun */
     transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px); /* Sichqoncha kelganda tepaga ko'tariladi */
+    transform: translateY(-10px);
 }
 
+/* 3. Rasm dizayni (Aynan shu qism rasmni to'g'rilaydi) */
 .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Rasmni mukammal doira qiladi */
+    object-fit: cover;  /* Rasmni cho'zib yubormaydi */
     border: 5px solid #f0f2f5;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-h1 { color: #333; margin-bottom: 5px; }
+/* 4. Matnlar dizayni */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
 
 .title {
     color: #764ba2;
+    font-size: 14px;
     font-weight: bold;
-    margin-bottom: 15px;
     text-transform: uppercase;
-    font-size: 0.9em;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
+p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* 5. Tugmalar (Social Links) */
 .social-links {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .btn {
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 12px 25px;
+    border-radius: 30px;
     color: white;
-    font-size: 14px;
-    transition: opacity 0.3s;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
 }
 
-.telegram { background: #0088cc; }
-.github { background: #333; }
+.telegram {
+    background-color: #0088cc;
+}
 
-.btn:hover { opacity: 0.8; }
-/* Instagram uchun gradient rang */
 .instagram {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-/* Ikonka va matn orasida bo'sh joy */
-.btn i {
-    margin-right: 8px;
-}
-
-/* Tugmalar ustiga sichqoncha kelganda */
 .btn:hover {
     opacity: 0.9;
-    transform: scale(1.05); /* Bir oz kattalashadi */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Ikonka o'lchami */
+.btn i {
+    font-size: 18px;
 }
